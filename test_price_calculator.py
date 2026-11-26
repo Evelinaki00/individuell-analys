@@ -12,13 +12,17 @@ def test_calculate_raises_value_error_for_negative_age() -> None:
 @pytest.mark.parametrize(
     ("age", "expected_price"),
     [
+
         (0, 50),
         (10, 50),
+        (12, 50),
+        (13, 100),
         (20, 100),
         (30, 100),
         (40, 100),
         (50, 100),
         (60, 100),
+        (64, 100),
         (65, 80),
         (70, 80),
         (80, 80),
